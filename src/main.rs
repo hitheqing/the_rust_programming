@@ -11,7 +11,7 @@ fn main() {
         println!("please use like: 'cargo run 3_1'");
         c2::main();
 
-        Command::new("cmd").arg("/c").arg("pause").status();
+        Command::new("cmd").arg("/c").arg("pause").status().unwrap();
         return;
     }
 
@@ -19,6 +19,9 @@ fn main() {
         "2" => c2::main(),
         "3_1" => c3::main_3_1(),
         "3_2" => c3::main_3_2(),
+        "3_3" => c3::main_3_3(),
+        "3_4" => c3::main_3_4(),
+        "3_5" => c3::main_3_5(),
         _ => {}
     }
 }

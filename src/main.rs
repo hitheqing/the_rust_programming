@@ -1,5 +1,22 @@
 mod c2;
 mod c3;
+mod c4;
+mod c5;
+mod c6;
+mod c7;
+mod c8;
+mod c9;
+mod c10;
+mod c11;
+mod c12;
+mod c13;
+mod c14;
+mod c15;
+mod c16;
+mod c17;
+mod c18;
+mod c19;
+mod c20;
 
 use std::process::{Command};
 
@@ -23,5 +40,5 @@ fn main() {
         "3_4" => c3::main_3_4(),
         "3_5" => c3::main_3_5(),
         _ => {}
-    }
+    };
 }

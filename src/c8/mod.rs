@@ -1,0 +1,3 @@
+mod _8_1_store_value_with_vectors;
+mod _8_2_store_utf8_with_string;
+mod _8_3_store_kvpaire_with_hashmap;

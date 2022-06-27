@@ -1,5 +1,5 @@
-use std::cmp::Ordering;
 use rand::Rng;
+use std::cmp::Ordering;
 
 pub fn main() {
     let rand_number = rand::thread_rng().gen_range(1..101);
@@ -13,9 +13,7 @@ pub fn main() {
             .read_line(&mut guess)
             .expect("fail to read");
 
-        let number: i32 = guess.trim()
-            .parse()
-            .expect("failed to parse to number");
+        let number: i32 = guess.trim().parse().expect("failed to parse to number");
 
         println!("你输入的是:{}", guess);
 

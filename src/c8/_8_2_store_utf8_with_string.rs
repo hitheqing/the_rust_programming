@@ -13,7 +13,6 @@ pub fn main() {
     // 2个以上的拼接
     let sformat = format!("{}{}{}", 1, 2, 3);
 
-
     // 索引字符串不允许,
     let sss = "xyz".to_string();
     // let c = sss[0]; //不能编译，因为utf8编码，一个字符占了多个长度，会带来误会

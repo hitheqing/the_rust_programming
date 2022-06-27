@@ -1,8 +1,10 @@
 pub fn main() {
     println!("\nreference borrowing 引用与借用");
     {
-        println!("大多情况下函数调用会转移所有权导致变量在函数调用后无法访问，\
-        需要把参数再次返回并且重新绑定变量才可以。使用引用来解决这一问题");
+        println!(
+            "大多情况下函数调用会转移所有权导致变量在函数调用后无法访问，\
+        需要把参数再次返回并且重新绑定变量才可以。使用引用来解决这一问题"
+        );
         println!("变量前加&就是定义一个引用。函数参数改为引用类型，就可以使用值，而不获取所有权");
         println!("fn foo(a_ref:&String,b_ref: &i32) a_ref,b_ref将以引用传入。");
         println!("创建引用的行为称为borrowing借用");
@@ -14,10 +16,11 @@ pub fn main() {
         let b = &mut a;
         *b = 100;
         println!(
-"let mut a = 2;
+            "let mut a = 2;
 let  b = &mut a;
 *b = 100;
-assert_eq!(a,100);");
+assert_eq!(a,100);"
+        );
         assert_eq!(a, 100);
 
         println!("同一时间只能有1个可变引用。因为多个可变引用可能出现数据竞争.同一时间指的是同一个作用域");

@@ -1,11 +1,3 @@
-mod c2;
-mod c3;
-mod c4;
-mod c5;
-mod c6;
-mod c7;
-mod c8;
-mod c9;
 mod c10;
 mod c11;
 mod c12;
@@ -16,10 +8,17 @@ mod c16;
 mod c17;
 mod c18;
 mod c19;
+mod c2;
 mod c20;
+mod c3;
+mod c4;
+mod c5;
+mod c6;
+mod c7;
+mod c8;
+mod c9;
 
-use std::process::{Command};
-
+use std::process::Command;
 
 fn main() {
     let args: Vec<String> = std::env::args().collect();
@@ -32,7 +31,13 @@ fn main() {
         return;
     }
 
-    match (&args[1]).as_str() {
+    let chapter =  args[1].as_str();
+    let mut c :String = chapter.to_string();
+    if chapter.contains(".") {
+         c = chapter.replace(".","_")
+    }
+
+    match c.as_str() {
         "2" => c2::main(),
         "3_1" => c3::main_3_1(),
         "3_2" => c3::main_3_2(),
@@ -56,6 +61,12 @@ fn main() {
         "8_1" => c8::main_8_1(),
         "8_2" => c8::main_8_2(),
         "8_3" => c8::main_8_3(),
+        "9_1" => c9::main_9_1(),
+        "9_2" => c9::main_9_2(),
+        "9_3" => c9::main_9_3(),
+        "10_1" => c10::main_10_1(),
+        "10_2" => c10::main_10_2(),
+        "10_3" => c10::main_10_3(),
         _ => {}
     };
 }

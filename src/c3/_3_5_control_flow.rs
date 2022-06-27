@@ -1,5 +1,4 @@
-pub fn main(){
-
+pub fn main() {
     // if
     println!("if");
     {
@@ -12,7 +11,9 @@ pub fn main(){
     };
     println!("if 的条件必须是bool值。不能像c++中的if 1");
     // let a = if true { 3} else { 3.0 };
-    println!("if 是表达式，每个分支必须返回相同的值。 if true {{ 3}} else {{ 3.0 }};  无法通过编译");
+    println!(
+        "if 是表达式，每个分支必须返回相同的值。 if true {{ 3}} else {{ 3.0 }};  无法通过编译"
+    );
 
     // loop
     println!("\nloop\nloop类似于while true");

@@ -1,11 +1,13 @@
-pub fn main(){
+pub fn main() {
     println!("以mod 来划分模块，类似于电脑的文件目录树");
-    println!("
+    println!(
+        "
 crate
 └── sound
     ├── instrument
     │   └── woodwind
-    └── voice");
+    └── voice"
+    );
     println!("借助ide，鼠标放在mod上可以显示mod的绝对路径。 绝对路径从跟开始");
     println!("绝对路径  crate::c7::_7_2_def_modules_scope_privacy::sound::voice");
     println!("相对路径  self::sound::voice");
@@ -32,7 +34,5 @@ mod sound {
         }
     }
 
-    pub mod voice {
-
-    }
+    pub mod voice {}
 }

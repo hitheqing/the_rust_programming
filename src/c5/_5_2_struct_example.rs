@@ -1,5 +1,4 @@
-pub fn main()
-{
+pub fn main() {
     #[derive(Debug)]
     struct Rectangle {
         width: u32,
@@ -15,7 +14,4 @@ pub fn main()
     println!("{{:#?}}输出多行，适用于复杂结构打印 rect1 is {:#?}", rect1);
     dbg!(&rect1);
     println!("dbg!(&rect1); 宏函数，输出多行的同时打印文件名和行号");
-
-
-
 }

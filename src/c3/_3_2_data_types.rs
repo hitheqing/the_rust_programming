@@ -31,27 +31,43 @@ pub fn main() {
 
     //bool
     println!("\nbool类型");
-    println!("type of true is:{},type of false is:{}", type_of(&true), type_of(&false));
+    println!(
+        "type of true is:{},type of false is:{}",
+        type_of(&true),
+        type_of(&false)
+    );
 
     // char
     println!("\n字符类型");
     let heart_eyed_cat = '😻';
-    println!("let heart_eyed_cat = '😻';type:{}", type_of(&heart_eyed_cat));
+    println!(
+        "let heart_eyed_cat = '😻';type:{}",
+        type_of(&heart_eyed_cat)
+    );
 
     // tuple
     println!("\n元组类型");
     let position = (10, 20);
     let (x, y) = position; // 元组解构
     println!("let position = (10,20); 元组声明后无法改变大小和类型。 用下标来访问元素 position.0 = {} position.1 = {} ", position.0, position.1);
-    println!("let (x,y) = position;  元组可以被解构成多个值。 x = {} ,y = {} ", x, y);
+    println!(
+        "let (x,y) = position;  元组可以被解构成多个值。 x = {} ,y = {} ",
+        x, y
+    );
     println!("()代表单元值。如果表达式不返回其他值，隐式返回单元值");
 
     // array
     println!("\n数组类型");
     let array_3 = [1, 2, 3];
     let array_2 = [2; 3];
-    println!("let array_3 = [1,2,3];  列表初始化  array_3 is:{:?}", array_3);
-    println!("let array_2 = [2;3];  n个相同元素初始化  array_2 is:{:?}", array_2);
+    println!(
+        "let array_3 = [1,2,3];  列表初始化  array_3 is:{:?}",
+        array_3
+    );
+    println!(
+        "let array_2 = [2;3];  n个相同元素初始化  array_2 is:{:?}",
+        array_2
+    );
     println!("通过下标访问。不可越界  array_3[2] is:{:?}", array_3[2]);
     ()
 }

@@ -1,6 +1,5 @@
 //! An I/O Project: Building a Command Line Program
 
-
 mod _12_1_accepting_command_line_arguments;
 mod _12_2_reading_a_file;
 mod _12_3_refactoring_to_improve_modularity_and_error_handling;

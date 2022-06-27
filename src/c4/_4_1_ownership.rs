@@ -1,4 +1,4 @@
-pub fn main(){
+pub fn main() {
     //所有权规则
     println!("\n所有权规则");
     println!("1.每个值任意时刻只有一个owner");
@@ -18,15 +18,15 @@ pub fn main(){
     println!("\nmove");
     {
         println!("对于简单类型和实现了Copy Trait的类型，赋值和函数调用会执行拷贝");
-        let x = 5;// 将5绑定到x
-        let y = x;// 将值x拷贝一份，并且绑定到y。 相当于stack上有2个5
+        let x = 5; // 将5绑定到x
+        let y = x; // 将值x拷贝一份，并且绑定到y。 相当于stack上有2个5
         println!("let x = 5;// 将5绑定到x");
         println!("let y = x;// 将值x拷贝一份，并且绑定到y。 相当于stack上有2个5");
     }
     {
         println!("对于其他类型,赋值和函数调用会执行move");
-        let s1 = String::from("hello");// 将字符串绑定到s1
-        let s2 = s1;// 将值x拷贝一份，并且绑定到y。 相当于stack上有2个5
+        let s1 = String::from("hello"); // 将字符串绑定到s1
+        let s2 = s1; // 将值x拷贝一份，并且绑定到y。 相当于stack上有2个5
         println!("let s1 = String::from(\"hello\");// 将hello绑定到s1");
         println!("let s2 = s1;// 将s1 move 到s2，s1不能再被使用");
     }
@@ -36,7 +36,7 @@ pub fn main(){
         println!("如果确实需要深拷贝，调用 clone函数");
         let s1 = String::from("hello");
         let s2 = s1.clone();
-        assert_eq!(s1,s2);
+        assert_eq!(s1, s2);
     }
 
     println!("\nCopy Trait");
@@ -46,7 +46,7 @@ pub fn main(){
         println!("元组类型的每个子类型实现copy，自身才会被copy。eg. (i32,i32)有，(i32,String)没有");
         let s1 = String::from("hello");
         let s2 = s1.clone();
-        assert_eq!(s1,s2);
+        assert_eq!(s1, s2);
     }
 
     println!("\n所有权和函数");

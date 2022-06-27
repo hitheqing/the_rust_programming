@@ -13,8 +13,10 @@ pub fn main() {
 
     // 常量，大写下划线，类型注释，编译期可计算值
     const MY_AGE: i32 = 30;
-    println!("const MY_AGE: i32 = 30; 常量，大写下划线，类型注释，编译期可计算值. MY_AGE = {}", MY_AGE);
-
+    println!(
+        "const MY_AGE: i32 = 30; 常量，大写下划线，类型注释，编译期可计算值. MY_AGE = {}",
+        MY_AGE
+    );
 
     // shadowing 变量遮蔽，重新绑定值和类型
     let m = 2;

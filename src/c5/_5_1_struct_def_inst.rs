@@ -1,5 +1,4 @@
-pub fn main()
-{
+pub fn main() {
     println!("\n结构体定义");
     {
         println!("struct关键字，类型标注，逗号分隔");
@@ -7,12 +6,16 @@ pub fn main()
             "struct People{{
     name:String,
     age:i32,
-}}")
+}}"
+        )
     }
 
     println!("\n结构体实例化");
     {
-        let p = People { name: "".to_string(), age: 0 };
+        let p = People {
+            name: "".to_string(),
+            age: 0,
+        };
         println!("let p = People{{ name: \"\".to_string(), age: 0 }};");
         println!("结构体跟普通变量一样，也分为可变和不可变。不可变的无法修改字段值");
         println!("  1.构造实例多个参数顺序可以不一致，推荐使用ide来完成构造");
@@ -30,7 +33,10 @@ pub fn main()
         println!("实例化：let point = Point2(3,4);");
         println!("访问：和元组一样使用下标。point.0 {}", point.0);
         let Point2(x, y) = point;
-        println!("解构：和元组类似，但是要写类型。let Point2(x,y) = point; x = {},y = {}", x, y);
+        println!(
+            "解构：和元组类似，但是要写类型。let Point2(x,y) = point; x = {},y = {}",
+            x, y
+        );
     }
 
     println!("\n没有任何字段的类单元结构体");
